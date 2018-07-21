@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+@keyframes shake {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-6px, 0, 0);
+  }
+  40% {
+    transform: translate3d(6px, 0, 0);
+  }
+  60% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  80% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-image: url(../assets/img/background.jpg);
+  display: flex;
+  font-family: 'Helvetica';
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.leaderboard-wrapper h2 {
+  color: rgb(243, 243, 243);
+  font-family: 'Audiowide', cursive;
+  font-size: calc(20px + 1.5vw);
+  margin: 20px;
+  text-align: center;
+  text-shadow: 7px 6px 8px black;
+  text-transform: uppercase;
+}
+
+.leaderboard {
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 7px solid white;
+  border-radius: 20px;
+  color: white;
+  min-height: 208px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.leaderboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.leaderboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.leaderboard li:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+.leaderboard li .name,
+.leaderboard li span {
+  font-weight: bold;
+}
+
+.leaderboard li div:last-child span:first-child {
+  color: #ce2227;
+}
+
+.leaderboard li div:last-child span:last-child {
+  font-size: 75%;
+}
+
+.shake-up {
+  animation: shake 0.75s ease-in-out;
+}
